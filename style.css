@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+
+}
+.digitalClock{
+    height: 100px;
+    width: 300px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px blue;
+    border: none;
+    padding-top: 20px;
+    display: none;
+}
+
+.needleClock{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border-radius: 100%;
+    background-image: url(https://t4.ftcdn.net/jpg/04/26/35/57/360_F_426355734_IpRW1YheMcqg1NIV3aiyC4y3oq6wJ1fS.jpg);
+    /* background-size: cover; */
+    background-position: center;
+    position: relative;
+    display: none;
+    /* visibility: hidden; */
+}
+.pointer{
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+}
+
+.hourHand{
+    height: 40px;
+    width: 4px;
+    background-color: red;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: rotate(90deg);
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+.minuteHand{
+    height: 60px;
+    width: 3px;
+    background-color: green;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: rotate(90deg);
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+.secondHand{
+    height: 80px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: rotate(90deg);
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.alarmClock{
+    height: 150px;
+    width: 300px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    display: none;
+    padding-top: 40px;
+    /* visibility: hidden; */
+}
+input{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+button{
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+    /* font-size: 20px; */
+    background-color: green;
+    box-shadow: 5px 5px 10px grey;
+
+}
+
+.change{
+    font: 20px bolder;
+    height: 40px;
+    width: 120px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
+
+}
+.change:hover{
+    cursor: pointer;
+    background-color: yellow;
+    transform: translateY(7px);
+    box-shadow: 10px 10px 10px red;
+    color: black;
+}
+
+.active{
+    display: block;
+    /* visibility: visible; */
+}
+.changeButton{
+    display: flex;
+    gap: 20px;
+}
+h1{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px black;
+
+}
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .digitalClock, .needleClock, .alarmClock{
+        width: 90%;
+    }
+    .digitalClock{
+        height: 80px;
+        font-size: 40px;
+    }
+    .needleClock{
+        height: 150px;
+    }
+    .alarmClock{
+        height: 100px;
+    }
+    .hourHand{
+        height: 30px;
+    }
+    .minuteHand{
+        height: 40px;
+    }
+    .secondHand{
+        height: 50px;
+    }
+    .change{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    
+}
