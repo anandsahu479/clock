@@ -167,21 +167,21 @@ h1{
     text-shadow: 2px 2px 2px black;
 
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 650px){
     .container{
         flex-direction: column;
         gap: 20px;
     }
-    .digitalClock, .needleClock, .alarmClock{
+    .digitalClock, .alarmClock{
         width: 90%;
     }
     .digitalClock{
         height: 80px;
         font-size: 40px;
     }
-    .needleClock{
+    /* .needleClock{
         height: 150px;
-    }
+    } */
     .alarmClock{
         height: 100px;
     }
@@ -202,5 +202,10 @@ h1{
     h1{
         font-size: 20px;
     }
-    
+    .changeButton{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
 }
